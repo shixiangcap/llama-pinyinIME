@@ -1,0 +1,7 @@
+set(TARGET interactive)
+add_library(${TARGET} SHARED interactive.cpp)
+target_link_libraries(${TARGET} PRIVATE common llama ${CMAKE_THREAD_LIBS_INIT} ${log-lib})
+target_compile_features(${TARGET} PRIVATE cxx_std_11)
+if (TARGET BUILD_INFO)
+    add_dependencies(${TARGET} BUILD_INFO)
+endif ()

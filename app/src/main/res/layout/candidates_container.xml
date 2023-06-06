@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<com.sx.llama.pinyinime.CandidatesContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/candidates_container"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/arrow_left_btn"
+        android:layout_width="@dimen/arrow_with"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/arrow_bg"
+        android:clickable="true"
+        android:src="@drawable/arrow_left" />
+
+    <ImageButton
+        android:id="@+id/arrow_right_btn"
+        android:layout_width="@dimen/arrow_with"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/btn_spilt"
+        android:background="@drawable/arrow_bg"
+        android:clickable="true"
+        android:src="@drawable/arrow_right"
+        android:layout_marginEnd="0dp"/>
+
+    <View
+        android:id="@+id/btn_spilt"
+        android:layout_width="1dp"
+        android:background="@drawable/candidates_vertical_line"
+        android:layout_toStartOf="@id/ibtn_close_keyboard"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/ibtn_close_keyboard"
+        android:layout_width="@dimen/close_keyboard_with"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/arrow_bg"
+        android:clickable="true"
+        android:src="@drawable/arrows_down_b" />
+
+    <ViewFlipper
+        android:id="@+id/candidate_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/arrow_right_btn"
+        android:layout_toRightOf="@id/arrow_left_btn">
+
+        <view
+            android:id="@+id/candidate_view1"
+            class="com.sx.llama.pinyinime.CandidateView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <view
+            android:id="@+id/candidate_view2"
+            class="com.sx.llama.pinyinime.CandidateView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ViewFlipper>
+</com.sx.llama.pinyinime.CandidatesContainer>

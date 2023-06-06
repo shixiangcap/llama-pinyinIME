@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:gravity="center" android:drawable="@drawable/keyboard_close_bg" />
+    <item android:top="3dp" android:bottom="3dp" android:left="3dp" android:right="3dp"
+        android:drawable="@drawable/arrows_down_b"/>
+</layer-list>
