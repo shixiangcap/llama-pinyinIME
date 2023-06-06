@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Demo/CBG_Android_Face_Reco-v3.6.0-2020-03-09-02_00_51/Meg-A-RK3288-FacePass-90-v3.6.0/Demo/MyApplication2/app/src/main/res/layout/candidates_container.xml" value="0.19157608695652173" />
+        <entry key="..\:/Demo/CBG_Android_Face_Reco-v3.6.0-2020-03-09-02_00_51/Meg-A-RK3288-FacePass-90-v3.6.0/Demo/MyApplication2/app/src/main/res/xml/settings.xml" value="0.18070652173913043" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
