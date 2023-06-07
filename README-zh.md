@@ -1,5 +1,7 @@
 # llama-pinyinIME
 
+简体中文 / [English](./README.md)
+
 Android Pinyin IME for port of Facebook's LLaMA model in C/C++
 
 演示DEMO：
@@ -59,7 +61,7 @@ android {
     defaultConfig {
         minSdkVersion 23
         // 和 libs/android.jar 保持一致
-        //noinspection ExpiredTargetSdkVersion
+        // noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
         versionCode 1
         versionName "1.0.0"
@@ -93,10 +95,12 @@ android {
         // but continue the build even when errors are found:
         abortOnError false
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     android.applicationVariants.all { variant ->
         variant.outputs.all {
             outputFileName = "ST_Pinyin_V${defaultConfig.versionName}.apk"
@@ -149,6 +153,8 @@ private String openaiKey = "YOUR_OPENAI_API_KEY";
 
 <img src="https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/b9f3f0c1-e265-4123-9b2a-59b2bd5d49e4" width="33%"/> <img src="https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/ee876d87-f62c-4944-b9af-19b2fa4d5e43" width="33%"/> <img src="https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/86abe544-a30e-44ed-869d-01feb26b8eaa" width="33%"/>
 
+- **注意**：后续演示基于内存为**12GB**的虚拟模拟器完成，而基于真实物理设备的测试结果表明，现有硬件的推理速度远未达到应用标准，`llama-pinyinIME`只能作为有关技术路线的验证原型，完成水平仅供参考。
+
 ## 示例
 
 ### 一般输入模式
@@ -156,8 +162,6 @@ private String openaiKey = "YOUR_OPENAI_API_KEY";
 `llama-pinyinIME`的一般使用方法和的Android设备上的其他输入法大体相当，同样支持中文、英文和标点符号输入，且在此基础上构建出移动应用程序同样可以支持真实物理设备上的安装与使用。
 
 https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/3456e18e-51c3-435c-b772-0c4fb0594056
-
-- **注意**：后续演示基于内存为**12GB**的虚拟模拟器完成，而基于真实物理设备的测试结果表明，现有硬件的推理速度远未达到应用标准，`llama-pinyinIME`只能作为有关技术路线的验证原型，完成水平仅供参考。
 
 ### 基于本地大型语言模型推理的输入模式
 
@@ -172,9 +176,9 @@ https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/3456e18e-51c3-435
 
 以[1.txt](https://github.com/shixiangcap/llama-pinyinIME/blob/main/app/src/main/cpp/llama/prompts/1.txt)的语法修正任务和[2.txt](https://github.com/shixiangcap/llama-pinyinIME/blob/main/app/src/main/cpp/llama/prompts/2.txt)的翻译任务和为例，`llama-pinyinIME`的实际打印效果如下：
 
-https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/13ccb397-e2ae-4bfc-b95d-6ab1205c6d75
+https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/a6c979ed-ada6-4257-af50-67faf0eb488c
 
-https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/32de640d-c53f-4309-afee-48daa00d37c7
+https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/759f9507-3364-4ad9-a03b-2feef28c9bf7
 
 ### 基于Openai API的联网辅助输入模式
 
@@ -204,4 +208,5 @@ https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/d68ee539-55f9-418
 <a href="https://github.com/orgs/shixiangcap/people"><img src="https://avatars.githubusercontent.com/u/134358037" height=20rem/></a>
 
 ## 使用许可
+
 [MIT](LICENSE) © shixiangcap

@@ -1,5 +1,7 @@
 # llama-pinyinIME
 
+English / [简体中文](./README-zh.md)
+
 Android Pinyin IME for port of Facebook's LLaMA model in C/C++
 
 Demo:
@@ -48,6 +50,7 @@ The goals of `llama-pinyinIME` include:
 apply plugin: 'com.android.application'
 
 android {
+    // 和 libs/android.jar 保持一致
     compileSdkVersion 25
     buildToolsVersion "26.0.2"
 
@@ -57,6 +60,8 @@ android {
 
     defaultConfig {
         minSdkVersion 23
+        // 和 libs/android.jar 保持一致
+        // noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
         versionCode 1
         versionName "1.0.0"
@@ -90,10 +95,12 @@ android {
         // but continue the build even when errors are found:
         abortOnError false
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     android.applicationVariants.all { variant ->
         variant.outputs.all {
             outputFileName = "ST_Pinyin_V${defaultConfig.versionName}.apk"
