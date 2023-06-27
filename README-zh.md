@@ -6,7 +6,7 @@ Android Pinyin IME for port of Facebook's LLaMA model in C/C++
 
 演示DEMO：
 
-https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/74c2b738-365b-4725-a094-2bf790f93e89
+https://github.com/shixiangcap/llama-pinyinIME/assets/41248645/6a5d17a7-1a80-4a31-869d-0758bd161ddb
 
 ## 内容列表
 
